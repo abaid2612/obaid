@@ -1,0 +1,70 @@
+<style>
+    .box:nth-child(2) {
+        flex-grow: 0.5;
+    }
+
+    .box {
+        flex-grow: 1;
+        /* width: 100px; */
+        background-color: rgb(203, 23, 23);
+        height: 100px;
+    }
+
+
+
+
+    #some {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2px;
+        row-gap: 2px;
+        height: fit-content;
+        border: 1px solid red;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    li:hover {
+        color: black;
+        background-color: aquamarine;
+    }
+
+    li {
+        text-align: center;
+        flex-grow: 1;
+        line-height: 50px;
+    }
+
+    li:not(:first-child) {
+        flex-grow: 0.2;
+    }
+
+    ol {
+        display: flex;
+        list-style-type: none;
+    }
+
+    header {
+        background: black;
+        color: white;
+    }
+</style>
+
+<header>
+    <nav>
+        <ol>
+            <li>LOGO</li>
+            <li>ABOUT</li>
+            <li>CONTACT US</li>
+            <li>DASHBOARD</li>
+            <li>LOGIN</li>
+        </ol>
+    </nav>
+</header>
+
+<div id="some">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+</div>

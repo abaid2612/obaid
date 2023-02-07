@@ -1,0 +1,131 @@
+*********************************
+basic wala code
+
+
+<style>
+    #box {
+        transform: rotate(30deg);
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        border: 1px solid black;
+        transition: transform 0.5s ease-out 0s;
+    }
+
+     #box:hover{
+    transform: scale(1.5);
+} 
+
+    #parent {
+        display: flex;
+        column-gap: 4px;
+        ;
+    }
+
+    @keyframes fanKiAnimation {
+
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+
+    }
+
+    #fan {
+        animation: fanKiAnimation 0.5s linear 0s;
+        animation-iteration-count: infinite;
+    }
+</style>
+
+<div id="box"></div>
+
+<img id="fan" src="fan.png" alt="">
+
+<-- <div id="parent">
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+</div> -->
+
+
+*********************************
+car animation wala code
+
+
+
+
+<style>
+    #road {
+        width: 100%;
+    }
+
+    @keyframes carAnimation {
+
+        from {
+            left: 0;
+        }
+
+        to {
+            left: 80%;
+        }
+
+    }
+
+    #carBody {
+        position: relative;
+        width: 300px;
+         border: 5px solid red; 
+        height: 100px;
+        position: absolute;
+        top: 20%;
+        animation: carAnimation 4s ease-in-out 0s;
+        animation-fill-mode: forwards;
+    }
+
+    #car {
+        width: 100%;
+    }
+
+    @keyframes wheelWaliAnimation {
+
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+
+    }
+
+    .wheel:nth-child(2) {
+        position: absolute;
+        left: 220px;
+        top: 70px;
+    }
+
+    .wheel:nth-child(3) {
+        position: absolute;
+        left: 49px;
+        top: 70px;
+    }
+
+    .wheel {
+        width: 40px;
+        animation: wheelWaliAnimation 4s ease-in-out 0s
+    }
+</style>
+
+<img id="road" src="myroad.jpg" alt="">
+
+<div id="carBody">
+    <img id="car" src="my-car.png" alt="">
+    <img class="wheel" src="wheel.png" alt="">
+    <img class="wheel" src="wheel.png" alt="">
+</div>
+
+           
